@@ -40,7 +40,7 @@ function leerTexto(texto){
 const speech=new SpeechSynthesisUtterance();
 speech.text=texto;
 speech.volume=2;
-speech.rate=0.5;
+speech.rate=0.8;
 speech.pitch=1;
 speech.lang='es-ES';
 
