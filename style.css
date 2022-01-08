@@ -4,11 +4,72 @@
     box-sizing: border-box;
 }
 body{
-    background: whitesmoke;
+    background: rgb(240, 240, 240);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: .3s ease all;
 }
+/* 
+SWITCH
+*/
+
+.switch {
+    background: black;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+  }
+  
+  .switch::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .switch.active {
+    background: whitesmoke;
+    color: #000;
+  }
+  
+  .switch.active::after {
+    right: 0;
+    left: unset;
+  }
+  
+  .switch span {
+    width: 30px;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    background: none;
+    color: #fff;
+  }
+  body.dark .switch span{
+      color: orange;
+  }
+/* 
+CONTENIDO
+*/
 .container{
-    margin: 60px auto;
+    margin: 40px auto;
     padding: auto;
     justify-content: center;
     text-align: center;
@@ -23,7 +84,7 @@ h1{
     text-align: center;
     display: flex;
     justify-content: center;
-  
+
     width: 100%;
     height: 30px;
     padding: 0 20px;
@@ -37,8 +98,15 @@ h1{
     color: white;
     cursor: pointer;
     border: none;
-    border-radius: 10px;
+    border-radius: 1000px;
     transition: .3 ease all;
+}
+.botones .start:hover{
+    letter-spacing: 2px;
+  
+}
+.botones .start i{
+    display: none;
 }
 .botones .stop{
     background: dodgerblue;
@@ -49,8 +117,15 @@ h1{
     color: white;
     cursor: pointer;
     border: none;
-    border-radius: 10px;
+    border-radius: 1000px;
     transition: .3 ease all;
+}
+.botones .stop:hover{
+    letter-spacing: 2px;
+  
+}
+.botones .stop i{
+    display: none;
 }
 .botones .play{
     background: darkolivegreen;
@@ -61,8 +136,15 @@ h1{
     color: white;
     cursor: pointer;
     border: none;
-    border-radius: 10px;
+    border-radius: 1000px;
     transition: .3 ease all;
+}
+.botones .play:hover{
+    letter-spacing: 2px;
+  
+}
+.botones .play i{
+    display: none;
 }
 .botones .empty{
     background: rgb(1, 1, 26);
@@ -73,8 +155,15 @@ h1{
     color: white;
     cursor: pointer;
     border: none;
-    border-radius: 10px;
+    border-radius: 1000px;
     transition: .3 ease all;
+}
+.botones .empty:hover{
+    letter-spacing: 2px;
+  
+}
+.botones .empty i{
+    display: none;
 }
 textarea{
     width: 40%;
@@ -83,6 +172,34 @@ textarea{
     font-size: 18px;
     font-weight: bold;
     border: none;
+}
+/* 
+MODO OSCURO
+*/
+body.dark{
+    background: rgb(19, 18, 18);
+}
+body.dark h1{
+    color: darkturquoise;
+}
+body.dark .botones .start{
+    color: black;
+}
+body.dark .botones .stop{
+    background: aqua;
+    color: black;
+}
+body.dark .botones .play{
+    background: lightgreen;
+    color: black;
+}
+body.dark .botones .empty{
+    background: burlywood;
+    color: black;
+}
+body.dark textarea{
+    background: rgb(29, 28, 28);
+    color: whitesmoke;
 }
 
 
@@ -96,7 +213,7 @@ textarea{
         width: 80%;
     }
     }
-@media screen and (max-width:450px) {
+@media screen and (max-width:460px) {
     textarea{
         width: 90%;
     }
@@ -122,27 +239,56 @@ textarea{
     }
 }
 @media screen and (max-width:400px) {
+    .container{
+        margin: 20px 0;
+    }
     h1{
         font-size: 40px;
     }
     .botones .start{
         margin: 0 5px;
-        padding: 5px 10px;
+      
     }
+    .botones .start p{
+        display: none;
+    }
+    .botones .start i{
+        display: block;
+        cursor: pointer;
+    }
+
 
     .botones .stop{
         margin: 0 5px;
-        padding: 5px 10px;
+      
+    }
+    .botones .stop p{
+        display: none;
+    }
+    .botones .stop i{
+        display: block;
     }
 
     .botones .play{
         margin: 0 5px;
-        padding: 5px 10px;
+      
+    }
+    .botones .play p{
+        display: none;
+    }
+    .botones .play i{
+        display: block;
     }
 
     .botones .empty{
         margin: 0 5px;
-        padding: 5px 10px;
+       
+    }
+    .botones .empty p{
+        display: none;
+    }
+    .botones .empty i{
+        display: block;
     }
 }
 
@@ -152,18 +298,17 @@ textarea{
     }
     .botones .start{
         
-        padding: 5px 5px;
+        margin: 0 2px;
     }
     .botones .stop{
        
-        padding: 5px 5px;
+        margin: 0 2px;
     }
     .botones .play{
     
-        padding: 5px 5px;
+        margin: 0 2px;
     }
     .botones .empty{
-    
-        padding: 5px 5px;
+        margin: 0 2px;
     }
 }
