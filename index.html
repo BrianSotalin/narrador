@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice recognition</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <button class="switch" id="switch">
         <span><i class="fas fa-sun"></i></span>
         <span><i class="fas fa-moon"></i></span>
     </button>
-    
+
     <div class="container">
-        
+
         <h1>Reconocimiento de voz</h1>
 
         <div class="botones">
-            <button class="start" id="grabar"><p>Grabar</p><i class="fas fa-microphone"></i></button>
-            <button class="stop" id="pausar"><p>Pausar</p><i class="fas fa-stop"></i></button>
-            <button class="play" id="play"><p>Play</p><i class="fas fa-play"></i></button>
-            <button class="empty" id="vaciar" ><p>Vaciar</p><i class="far fa-trash-alt"></i></button>
+            <button class="start" id="grabar">
+                <p>Grabar</p><i class="fas fa-microphone"></i>
+            </button>
+            <button class="stop" id="pausar">
+                <p>Pausar</p><i class="fas fa-stop"></i>
+            </button>
+            <button class="play" id="play">
+                <p>Play</p><i class="fas fa-play"></i>
+            </button>
+            <button class="empty" id="vaciar">
+                <p>Vaciar</p><i class="far fa-trash-alt"></i>
+            </button>
         </div>
         <textarea name="" id="texto" cols="30" rows="10"></textarea>
-       
-    
-</div>
+
+
     </div>
+    </div>
+    <footer class="footer">
+        <p class="footer-message">
+            Hecho por Brian Sotalin <i class="fas fa-dragon"></i><br>
+            Sigueme:
+        </p>
+        <div class="social">
+            <a href="https://github.com/BrianSotalin" class="social-item">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/blady.10p/?hl=es" class="social-item">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <p class="footer-copyright">
+            @Copyright 2022 - All rights reserved.
+        </p>
+
+    </footer>
     <script src="app.js"></script>
-    
+
 </body>
+
 </html>
