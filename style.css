@@ -179,28 +179,16 @@ FOOTER
 footer{
     margin-top: 60px;
     text-align: center;
+    transition: .3s ease all;
     }
-    footer p{
-      font-size: 15px;
-      font-weight: bold;
-      color: darkslategrey;
-    }
-    footer .social{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    footer:hover{
+        letter-spacing: 2px;
     }
     footer a{
-      margin: 30px ;
-     padding: 30px;
-      color: black;
-      font-size: 30px;
-      transition: .3s ease all;
-    
+        text-decoration: none;
+        color: rgb(53, 52, 52);
     }
-    footer a:hover{
-      color: darkslategrey;
-    }
+   
 /* 
 MODO OSCURO
 */
@@ -229,11 +217,11 @@ body.dark textarea{
     background: rgb(29, 28, 28);
     color: whitesmoke;
 }
-body.dark footer p{
-    color: darkcyan;
+body.dark footer {
+    color: rgb(66, 65, 65);
   }
   body.dark footer a{
-    color: lightseagreen;
+    color: rgb(100, 167, 163);
   }
   body.dark footer a:hover{
     color: aqua;
